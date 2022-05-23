@@ -11,6 +11,6 @@ PASS=123456
 mysqldump -u$USER -p$PASS -d $DB >$Backup_Location/MYSQLDB.sql
 
 
-# add crontab -e
+# add crontab -e for Daily 1:00 am backup
 
 0 1 * * * /bin/bash /root/auto_backup_mysql.sh >>/tmp/mysql_bak.log
